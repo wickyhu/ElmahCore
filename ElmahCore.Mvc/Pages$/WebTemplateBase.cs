@@ -15,11 +15,22 @@ namespace ElmahCore.Mvc
         public ErrorLog ErrorLog { get; set; }
 
 	    private string _elmahRoot = string.Empty;
-	    public string ElmahRoot
+
+		//wicky.start
+        internal string ElmahRootInternal
+        {
+            get => _elmahRoot;
+            set => _elmahRoot = value;
+        }
+		//wicky.end
+
+        public string ElmahRoot
 	    {
 		    get => Request.PathBase + _elmahRoot;
-		    set => _elmahRoot = value;
-	    }
+            //wicky.start
+            //set => _elmahRoot = value;
+            //wicky.end
+        }
         //public HttpServerUtilityBase Server { get { return Context.Server; } }
 
 

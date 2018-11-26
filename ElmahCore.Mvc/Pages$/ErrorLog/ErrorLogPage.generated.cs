@@ -125,7 +125,10 @@ WriteLiteral("\r\n");
         Context  = Context, /* TODO Consider not requiring this */
         Title    = title,
         Footnote = string.Format("This log is provided by the {0}.", log.Name),
-        ElmahRoot = ElmahRoot,
+		//wicky.start
+        //ElmahRoot = ElmahRoot,
+        ElmahRootInternal = ElmahRootInternal,
+		//wicky.end
         ErrorLog = ErrorLog,
         SpeedBarItems = new[] 
         {

@@ -41,7 +41,9 @@ namespace ElmahCore.Demo
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-
+			//wicky.start
+            app.UsePathBase("/test");
+			//wicky.end
 
             if (env.IsDevelopment())
             {

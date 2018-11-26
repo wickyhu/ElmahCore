@@ -69,7 +69,10 @@ WriteLiteral("\r\n");
     {
         Context  = Context, /* TODO Consider not requiring this */
         Title    = title,
-        ElmahRoot = ElmahRoot,
+		//wicky.start
+        //ElmahRoot = ElmahRoot,
+        ElmahRootInternal = ElmahRootInternal,
+		//wicky.end
         ErrorLog = ErrorLog,
         SpeedBarItems = new[]
         {

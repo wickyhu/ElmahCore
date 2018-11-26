@@ -200,7 +200,10 @@ namespace ElmahCore.Mvc
         
         async Task ProcessTemplate<T>(HttpContext context, ErrorLog error) where T : WebTemplateBase, new()
         {
-            var template = new T { Context = context, ErrorLog = error, ElmahRoot = _elmahRoot};
+            //wicky.start
+            //var template = new T { Context = context, ErrorLog = error, ElmahRoot = _elmahRoot};
+            var template = new T { Context = context, ErrorLog = error, ElmahRootInternal = _elmahRoot};
+            //wicky.end
 
             await context.Response.WriteAsync(template.TransformText());
         }
