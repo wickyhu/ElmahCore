@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elmah>
+  <errorFilter>
+    <test>
+      <or>
+        <equal binding="HttpStatusCode" value="404" type="Int32" />
+        <equal binding="Context.Connection.LocalIpAddress.ToString()" value="::1" type="String" />
+        <equal binding="Context.Connection.LocalIpAddress.ToString()" value="127.0.0.1" type="String" />
+      </or>
+    </test>
+  </errorFilter>
+</elmah>

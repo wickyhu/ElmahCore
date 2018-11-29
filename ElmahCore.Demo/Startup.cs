@@ -31,7 +31,10 @@ namespace ElmahCore.Demo
 	        {
 		        options.CheckPermissionAction = context => true;//context.User.Identity.IsAuthenticated;
 	            options.Path = "el/mah";
-	        });
+                //wicky.start
+                options.FiltersConfig = "elmah.xml";
+                //wicky.end
+            });
 
 
 
